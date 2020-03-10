@@ -6,14 +6,16 @@ function ubahHuruf(kata) {
     {
         for(var j=0;j<huruf.length;j++)
         {
-            if(kata[i]==huruf[j])
+            if (kata[i]=='z')
+            {
+                ubah+='a'
+                break
+            }
+            else if(kata[i]==huruf[j])
             {
                 ubah+=huruf[j+1]
             }
-            else if (kata[i]=='z')
-            {
-                ubah+='a'
-            }
+            
         }
     }
     return ubah

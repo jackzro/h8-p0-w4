@@ -6,17 +6,14 @@ function fpb(angka1, angka2) {
     // }
     // return fpb(angka2,angka1%angka2)
     var temp=0
-    var flag=0
     do {
         temp=angka2
         angka2=angka1%angka2
         angka1=temp
-        flag++
 
 
     }while(angka1%angka2!==0)
-    console.log(flag)
-    return angka1
+    return angka2
   }
   
   // TEST CASES
