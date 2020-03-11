@@ -1,14 +1,15 @@
 function nominasi(votes){
     var res=[]
     for (let i = 0; i < votes.length; i++) {
-        var flag=true
+        var exist=true
         for (let j = 0; j < res.length; j++) {
+            console.log(res.length)
             if(res[j]===votes[i])
             {
-                flag=false
+                exist=false
             }    
         }
-        if (flag==true)
+        if (exist)
         {
             res.push(votes[i])
         }
