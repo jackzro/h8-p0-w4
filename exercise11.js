@@ -1,50 +1,33 @@
 function shoppingTime(memberId, money) {
     // you can only write your code here!
-    var member={
+    var member = {
         memberId: memberId,
-        money: money,
+        money: money
     }
-    var listPurchased={
+    var listPurchased = {
         'Sepatu Stacattu': 1500000,
         'Baju Zoro': 500000,
-        'Baju H&N' :250000,
+        'Baju H&N': 250000,
         'Sweater Uniklooh': 175000,
         'Casing Handphone': 50000
     }
-    var barang=[]
-    // var data =member.listPurchased=listPurchased
-
-    // data.moneyChange=1000
-    // console.log(member)
-    // for (var key in listPurchased)
-    // {
-    //     console.log(listPurchased[key])
-    // }
-
-
-    if((memberId==''&&money<=50000)||(memberId==''&&money>=50000)||(memberId==undefined&&money==undefined))
-    {
+    var barang = []
+    if ((memberId == '' && money <= 50000) || (memberId == '' && money >= 50000) || (memberId == undefined && money == undefined)) {
         return 'Mohon maaf, toko X hanya berlaku untuk member saja'
-    }
-    else if (memberId==memberId&&money<50000)
-    {
+    } else if (memberId == memberId && money < 50000) {
         return 'Mohon maaf, uang tidak cukup'
-    }
-    else if (memberId==memberId&&money>=50000)
-    {
-        for(var key in listPurchased)
-        {
-            if(money>=listPurchased[key])
-            {
-                money-=listPurchased[key]
+    } else if (memberId == memberId && money >= 50000) {
+        for (var key in listPurchased) {
+            if (money >= listPurchased[key]) {
+                money -= listPurchased[key]
                 barang.push(key)
             }
         }
-        member.listPurchased=barang
-        member.changeMoney=money
+        member.listPurchased = barang
+        member.changeMoney = money
         return member
     }
-  }
+}
   
   // TEST CASES
   console.log(shoppingTime('1820RzKrnWn08', 2475000));

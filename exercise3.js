@@ -3,22 +3,17 @@ function cariMedian(arr) {
     var median = 0
     var index = 0
     var temp
-    for(var i=0;i<arr.length;i++)
-    {
-        for(var j=0;j<arr.length-1;j++)
-        {
-            if(arr[j]>arr[j+1]){
-            // temp=arr[j]
-            // arr[j]=arr[j+1]
-            // arr[j+1]=temp
-            [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
-        }
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp
+            }
         }
     }
-    //console.log(arr)
     if (arr.length % 2 == 0) {
         index = arr.length / 2
-        //console.log(arr[index])
         median = (arr[index - 1] + arr[index]) / 2
         return median
     } else if (arr.length % 2 !== 0) {
