@@ -6,7 +6,7 @@ function urutkanAbjad(str) {
         abjad.push(str[i])
     }
     for (var i = 0; i < abjad.length; i++) {
-        for (var j = 0; i < abjad.length; i++) {
+        for (var j = 0; j < abjad.length; j++) {
             if (abjad[i] < abjad[j]) {
                 var temp = abjad[i]
                 abjad[i] = abjad[j]
