@@ -16,4 +16,3 @@ console.log(fpb(50, 40)); // 10
 console.log(fpb(22, 99)); // 11
 console.log(fpb(24, 36)); // 12
 console.log(fpb(17, 23)); // 1
-console.log(fpb(1, 3)); // 1
